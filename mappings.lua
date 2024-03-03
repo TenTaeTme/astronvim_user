@@ -6,6 +6,10 @@
 return {
   -- first key is the mode
   n = {
+    ["<leader>fd"] = {
+      function() require("telescope.builtin").lsp_definitions { jump_type = "never" } end,
+      desc = "lsp definitions",
+    },
     -- second key is the lefthand side of the map
 
     -- navigate buffer tabs with `H` and `L`
