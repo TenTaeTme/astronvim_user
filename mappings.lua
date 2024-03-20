@@ -6,6 +6,23 @@
 return {
   -- first key is the mode
   n = {
+    -- packagejson config manager
+    ["<leader>ns"] = {
+      function() require("package-info").show() end,
+      desc = "show info package",
+    },
+    ["<leader>np"] = {
+      function() require("package-info").change_version() end,
+      desc = "change version package json",
+    },
+    ["<leader>nd"] = {
+      function() require("package-info").delete() end,
+      desc = "delete version package json",
+    },
+    ["<leader>ni"] = {
+      function() require("package-info").install() end,
+      desc = "install version package json",
+    },
     ["<leader>fd"] = {
       function() require("telescope.builtin").lsp_definitions { jump_type = "never" } end,
       desc = "lsp definitions",
