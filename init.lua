@@ -91,6 +91,12 @@ return {
         if vim.fn.argc() == 0 then vim.cmd "Neotree toggle" end
       end,
     })
+
+    -- Set filetype to php.html for .php files on buffer read and new file creation
+    vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+      pattern = "*.php",
+      callback = function() vim.bo.filetype = "php.html" end,
+    })
     vim.g.copilot_no_tab_map = true
     vim.api.nvim_set_keymap("i", "<C-t>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
   end,

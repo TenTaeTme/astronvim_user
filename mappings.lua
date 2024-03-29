@@ -51,13 +51,16 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader>a"] = { "<cmd>echo 'Hello world'<cr>", desc = "Hello world echo" },
+    ["<leader>aa"] = { "ggyG", desc = "Copy whole buffer" },
+    ["<leader>ac"] = { "ggdG", desc = "Cut whole buffer" },
+    ["<leader>pp"] = { '"0p', desc = "Put from 0 register" },
     ["<C-u>"] = { "<C-u>zz", desc = "Up and center" },
     ["<C-d>"] = { "<C-d>zz", desc = "Down and center" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     ["<leader>w"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["<leader>q"] = { ":wqa<cr>", desc = "Save all and quit" }, -- change description but the same command
   },
   i = {},
   t = {
