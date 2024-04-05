@@ -6,6 +6,18 @@
 return {
   -- first key is the mode
   n = {
+    -- ["<C-,>"] = {
+    --   "<Cmd>ToggleTerm<CR>",
+    --   desc = "Toggle Terminal",
+    -- },
+    ["<C-.>"] = {
+      "<Cmd>ToggleTerm size=60 direction=vertical<CR>",
+      desc = "Open vertical Terminal",
+    },
+    ["<C-,>"] = {
+      "<Cmd>2ToggleTerm size=60 direction=vertical<CR>",
+      desc = "Open second vertical Terminal",
+    },
     -- packagejson config manager
     ["<leader>ns"] = {
       function() require("package-info").show() end,
@@ -60,10 +72,37 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     ["<leader>w"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
-    ["<leader>q"] = { ":wqa<cr>", desc = "Save all and quit" }, -- change description but the same command
+    ["<leader>q"] = { "::wall|qa!<cr>", desc = "Save all and quit" }, -- change description but the same command
   },
-  i = {},
+  i = {
+
+    -- ["<C-,>"] = {
+    --   "<Cmd>ToggleTerm<CR>",
+    --   desc = "Toggle Terminal",
+    -- },
+
+    ["<C-.>"] = {
+      "<Cmd>ToggleTerm size=60 direction=vertical<CR>",
+      desc = "Open vertical Terminal",
+    },
+    ["<C-,>"] = {
+      "<Cmd>2ToggleTerm size=60 direction=vertical<CR>",
+      desc = "Open second vertical Terminal",
+    },
+  },
   t = {
+    -- ["<C-,>"] = {
+    --   "<Cmd>ToggleTerm<CR>",
+    --   desc = "Toggle Terminal",
+    -- },
+    ["<C-.>"] = {
+      "<Cmd>ToggleTerm size=60 direction=vertical<CR>",
+      desc = "Open vertical Terminal",
+    },
+    ["<C-,>"] = {
+      "<Cmd>2ToggleTerm size=60 direction=vertical<CR>",
+      desc = "Open second vertical Terminal",
+    },
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
