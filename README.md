@@ -10,11 +10,15 @@ A user configuration template for [AstroNvim](https://github.com/AstroNvim/Astro
 mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
+#### intall nvim on ubunt
+```shell
+sudo apt install neovim
+```
 
 #### Clone AstroNvim
 
 ```shell
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
 ```
